@@ -44,7 +44,7 @@ const TransactionModal = ({
           <h2 className="text-medium font-medium">New Transaction</h2>
         </div>
 
-        <div className="px-6 pb-7 pt-8">
+        <div className="px-6 pb-4 pt-4">
           {/* Amount */}
           <div className="flex items-center justify-center">
             <input
@@ -61,21 +61,21 @@ const TransactionModal = ({
           {/* Date */}
           <button
             type="button"
-            className="mt-6 flex w-full items-center justify-between rounded-2xl border border-gray-200 px-5 py-2 text-left"
+            className="mt-3 flex w-full items-center justify-between rounded-2xl border border-gray-200 px-4 py-1 text-left"
           >
-            <div>
+            <div className="flex flex-col gap-1">
               <p className="text-sm text-gray-500">Date</p>
-              <p className="mt-0.5 text-base font-medium">Today</p>
+              <p className="mt-0.5 text-sm font-medium">Today</p>
             </div>
 
             <CalendarDaysIcon className="size-5 text-gray-500" />
           </button>
 
           {/* Transaction Type */}
-          <div className="mt-5 grid grid-cols-3 rounded-2xl bg-gray-100 p-1">
+          <div className="mt-3 grid grid-cols-3 rounded-xl bg-gray-100 p-1">
             <button
               type="button"
-              className="flex items-center justify-center gap-1.5 rounded-xl bg-white px-2 py-3 text-sm font-medium shadow-sm"
+              className="flex items-center justify-center gap-1.5 rounded-xl bg-white px-2 py-1 text-sm font-medium shadow-sm"
             >
               <ArrowDownLeftIcon className="size-4 text-red-500" />
               Expense
@@ -98,7 +98,7 @@ const TransactionModal = ({
           </div>
 
           {/* Description */}
-          <div className="mt-5 flex items-center rounded-2xl bg-gray-50 px-5">
+          <div className="mt-3 flex items-center rounded-2xl bg-gray-50 px-5">
             <input
               type="text"
               placeholder="Description"
@@ -112,7 +112,7 @@ const TransactionModal = ({
           <button
             type="button"
             onClick={onCategoryClick}
-            className="mt-5 flex h-16 w-full items-center justify-between rounded-2xl bg-gray-50 px-5 text-left"
+            className="mt-2 flex h-16 w-full items-center justify-between rounded-2xl bg-gray-50 px-5 text-left"
           >
             <span className="text-base text-gray-400">Category</span>
 
@@ -120,7 +120,7 @@ const TransactionModal = ({
           </button>
 
           {/* Recurring */}
-          <div className="mt-7 flex items-start gap-4 px-1">
+          <div className="mt-4 flex items-start gap-4 px-1">
             <div className="mt-0.5">
               <CalendarDaysIcon className="size-6" />
             </div>
