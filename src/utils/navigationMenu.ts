@@ -5,8 +5,8 @@ import {
 } from "@heroicons/react/24/outline";
 import type { ComponentType, SVGProps } from "react";
 import Home from "../components/Home/Home";
-import Cashflow from "../components/Cashflow";
-import NetWorth from "../components/NetWorth";
+import SmartSplit from "../components/Cashflow";
+import DetailedCharts from "../components/NetWorth";
 
 type NavItem = {
   id: string;
@@ -23,15 +23,15 @@ export const navItems: NavItem[] = [
     component: Home
   },
   {
-    id: "cashflow",
+    id: "smart-split",
     icon: BanknotesIcon,
-    title: "Cashflow",
-    component: Cashflow
+    title: "Smart Split",
+    component: SmartSplit
   },
   {
-    id: "net-worth",
+    id: "detailed-charts",
     icon: ChartBarIcon,
-    title: "Net Worth",
-    component: NetWorth
+    title: "Detailed Charts",
+    component: DetailedCharts
   },
 ];

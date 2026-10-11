@@ -1,22 +1,28 @@
-import type { CategoryId } from "./categories";
+import type { CategoryId } from "./categories";import {
+  ArrowDownLeftIcon,
+  ArrowUpRightIcon,
+  DocumentCurrencyRupeeIcon
+} from "@heroicons/react/24/outline";
 
 
 export const transactionType = [
   {
-    id: "expense",
-    label: "Expense",
-  },
-  {
     id: "income",
     label: "Income",
+    icon: ArrowUpRightIcon,
+    color: "text-green-500"
   },
   {
-    id: "transfer",
-    label: "Transfer",
+    id: "expense",
+    label: "Expense",
+    icon: ArrowDownLeftIcon,
+    color: "text-red-500",
   },
   {
     id: "investment",
     label: "Investment",
+    icon: DocumentCurrencyRupeeIcon,
+    color: "text-blue-500",
   },
 ] as const;
 
@@ -31,6 +37,16 @@ export type Transaction = {
   categoryId?: CategoryId;
   date: string;
   note?: string;
+  recurring?: boolean;
+};
+
+export type TransactionForm = {
+  amount: number;
+  typeId: TransactionTypeId;
+  date: Date;
+  description: string;
+  categoryId?: CategoryId;
+  recurring: boolean;
 };
 
 

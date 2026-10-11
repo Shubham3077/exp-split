@@ -1,15 +1,18 @@
 import { useState } from "react";
 import CategoryModal from "./CategoryModal";
 import Dropdown from "./Dropdown";
-import { transactions, transactionType } from "../utils/transactionTypes";
+import { transactionType } from "../utils/transactionTypes";
 import TransactionItems from "./TransactionItems";
 import NewTransaction from "./NewTransaction";
+import { useSelector } from "react-redux";
+import type { RootState } from "../store/store";
 
 const Transactions = () => {
   const [isCategoryModal, setIsCategoryModal] = useState(false);
   const [transaction, setTransaction] = useState("Type");
   const transactionTypes = transactionType.map((t) => t.label);
   const [newTransationModal, setNewTransactionModal] = useState(false);
+  const transactions = useSelector((state: RootState) => state.transactions);
 
   return (
     <div className="mt-8">
@@ -44,7 +47,10 @@ const Transactions = () => {
       </div>
 
       {isCategoryModal && (
-        <CategoryModal onClose={() => setIsCategoryModal(false)} />
+        <CategoryModal
+          onClose={() => setIsCategoryModal(false)}
+          // onCategorySelect={handleCategorySelect}
+        />
       )}
 
       {newTransationModal && (

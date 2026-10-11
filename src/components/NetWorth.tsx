@@ -1,8 +1,8 @@
 
-const NetWorth = () => {
+const DetailedCharts = () => {
   return (
     <div>NetWorth</div>
   )
 }
 
-export default NetWorth
+export default DetailedCharts;

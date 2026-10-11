@@ -1,9 +1,9 @@
 
 
-const Cashflow = () => {
+const SmartSplit = () => {
   return (
     <div>Cashflow</div>
   )
 }
 
-export default Cashflow
+export default SmartSplit;

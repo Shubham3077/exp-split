@@ -1,11 +1,12 @@
 import { XMarkIcon, PlusIcon } from "@heroicons/react/24/outline";
-import { categoryOptions } from "../utils/categories";
+import { categoryOptions, type CategoryId } from "../utils/categories";
 
 type CategoryProps = {
   onClose: () => void;
+  onCategorySelect: (categoryId: CategoryId) => void;
 };
 
-const CategoryModal = ({ onClose }: CategoryProps) => {
+const CategoryModal = ({ onClose, onCategorySelect }: CategoryProps) => {
   return (
     // backdrop
     <div
@@ -52,6 +53,7 @@ const CategoryModal = ({ onClose }: CategoryProps) => {
                     <button
                       key={category.id}
                       className="flex items-center gap-2 rounded-full border border-gray-200 px-2 py-1 text-xs"
+                      onClick={() => onCategorySelect(category.id)}
                     >
                       <span>{category.icon}</span>
                       <span>{category.label}</span>
